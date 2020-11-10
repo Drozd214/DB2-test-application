@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">DB2Test</string>
+
+    <string name="privat_bank">ПриватБанк</string>
+    <string name="nbu_bank">НБУ</string>
+
+    <string name="date"><u>%s</u></string>
+
+    <string name="date_picker_title">Оберіть дату</string>
+
+    <string name="currency">Валюта</string>
+    <string name="purchase">Купівля</string>
+    <string name="sale">Продаж</string>
+
+    <string name="no_data_error">Нажаль, дані на цю дату відсутні</string>
+    <string name="no_connection_error">Перевірте наявність інтернет-з\'єднання та спробуйте знову</string>
+    <string name="default_error">Упс, щось пішло не так…</string>
+</resources>

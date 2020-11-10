@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.main.MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <TextView
+        android:id="@+id/privatBankTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/privat_bank"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ПриватБанк" />
+
+    <TextView
+        android:id="@+id/privatBankDateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_orange_dark"
+        android:text="@string/date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/privatBankTv"
+        tools:text="01.01.2020" />
+
+    <ImageView
+        android:id="@+id/privatBankDateIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/privatBankDateTv"
+        app:layout_constraintTop_toTopOf="@+id/privatBankDateTv"
+        app:srcCompat="@drawable/calendar_range" />
+
+    <TextView
+        android:id="@+id/currencyTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/privatBankTv"
+        tools:text="@string/currency" />
+
+    <TextView
+        android:id="@+id/saleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sale"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/currencyTv" />
+
+    <TextView
+        android:id="@+id/purchaseTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/purchase"
+        app:layout_constraintEnd_toStartOf="@+id/saleTv"
+        app:layout_constraintStart_toEndOf="@+id/currencyTv"
+        app:layout_constraintTop_toTopOf="@+id/currencyTv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/privatBankRv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currencyTv" />
+
+    <TextView
+        android:id="@+id/nbuBankTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/nbu_bank"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/nbuBankDateTv"
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nbuBankTv"
+        tools:text="01.01.2020" />
+
+    <ImageView
+        android:id="@+id/nbuBankDateIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/nbuBankDateTv"
+        app:layout_constraintTop_toTopOf="@+id/nbuBankDateTv"
+        app:srcCompat="@drawable/calendar_range" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/nbuBankRv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nbuBankTv" >
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/privatBankErrorTv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="@string/no_data_error"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/privatBankRv"
+        app:layout_constraintStart_toStartOf="@+id/privatBankRv"
+        app:layout_constraintTop_toTopOf="@+id/privatBankRv" />
+
+    <TextView
+        android:id="@+id/nbuBankErrorTv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/no_data_error"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/nbuBankRv"
+        app:layout_constraintEnd_toEndOf="@+id/nbuBankRv"
+        app:layout_constraintStart_toStartOf="@+id/nbuBankRv"
+        app:layout_constraintTop_toTopOf="@+id/nbuBankRv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
